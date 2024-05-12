@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cafes.lol</title>
+<style>
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    text-align: center;
+  }
+  .title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  .description {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    background-color: rgba(37, 38, 38);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    margin: 0 20px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+<audio id="audio" src="audio/main.mp3"></audio>
+<div class="container">
+  <div>
+    <div class="title">cafes.lol</div>
+    <div class="description">most free tools for real</div>
+    <div class="buttons">
+      <button class="button" id="muteButton" onclick="toggleMute()">Unmute</button>
+      <button class="button" onclick="window.location.href='http://example.com'">Support</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  var audio = document.getElementById("audio");
+  var muteButton = document.getElementById("muteButton");
+  var isMuted = false;
+
+  function toggleMute() {
+    if (isMuted) {
+      audio.muted = false;
+      muteButton.innerText = "Unmute";
+    } else {
+      audio.muted = true;
+      muteButton.innerText = "Mute";
+    }
+    isMuted = !isMuted;
+  }
+</script>
+</body>
+</html>
